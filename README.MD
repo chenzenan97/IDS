@@ -7,4 +7,4 @@ The code uses nested for loops to iterate through each pixel in the background i
 
 Project2
 ========================================
-In this demo notebook we are going to demonstrate the creation and use of a ResNet model to see how the ResNet's skip connections can be implemented in code. The implementations demonstrated here are shallow ResNet model rather than the deep ResNet architectures described in the paper (and available in the PyTorch model zoo).
+ResNet model 
