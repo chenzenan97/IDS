@@ -4,7 +4,7 @@ use rockpaperscissors::play;
 #[derive(Parser)]
 #[clap(
     version = "1.0",
-    author = "Mian Wu",
+    author = "chen",
     about = "A Rock-Paper-Scissors game."
 )]
 struct Cli {
@@ -16,7 +16,7 @@ struct Cli {
 enum Commands {
     #[clap(
         version = "1.0",
-        author = "Mian Wu",
+        author = "chen",
         about = "A Rock-Paper-Scissors game."
     )]
     Play {
