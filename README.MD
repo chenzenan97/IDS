@@ -8,3 +8,7 @@ The code uses nested for loops to iterate through each pixel in the background i
 Project2
 ========================================
 ResNet model 
+
+PROJECT4
+=========================
+A Rust CLI Rock-Paper-Scissors game.
