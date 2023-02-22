@@ -12,3 +12,7 @@ ResNet model
 Project4
 =========================
 A Rust CLI Rock-Paper-Scissors game.
+
+Project5 
+=========================
+Edge detection - Rust Image
