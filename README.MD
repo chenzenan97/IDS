@@ -9,6 +9,6 @@ Project2
 ========================================
 ResNet model 
 
-PROJECT4
+Project4
 =========================
 A Rust CLI Rock-Paper-Scissors game.
