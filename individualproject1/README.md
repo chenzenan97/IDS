@@ -5,3 +5,9 @@ Individual Project #1: Rust CLI
  
  
  
+which will run 
+
+```
+cargo run --  10 10 20 20 4 10 20 20
+```
+Output:IoU value: 0.625
