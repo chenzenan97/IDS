@@ -6,6 +6,7 @@
 *get genres :http://localhost:8000/show_genres  ->genres
 #get recommendations from http://localhost:8000/[genre]
 ![spotifyrecommdention](show_genres.png)
+## Recommendation
 ![spotifyrecommdention](return_Recommendation.png)
 ## To push an image to DockerHub, follow these steps:
 * `docker login` and enter your docker "user_name" and "user_secret" as prompted
@@ -36,4 +37,5 @@
         * `minikube service [NAME OF YOUR APP]`
       * You could also use kubectl to forward the port from 8080 to local 7080
         * `kubectl port-forward service/[NAME OF YOUR APP] 7080:8080`
-![spotifyrecommdention](minkube.png)
+## Minikube
+![spotifyrecommdention](minikube.png)
