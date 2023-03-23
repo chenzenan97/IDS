@@ -1,3 +1,4 @@
+
 use lambda_http::{
     aws_lambda_events::serde_json::json, run, service_fn, Body, Error, IntoResponse, Request,
     RequestExt, Response,
@@ -12,11 +13,11 @@ struct FactList {
 impl FactList {
     fn new() -> FactList {
         FactList { facts: vec![
-            "The shortest war in history was between Britain and Zanzibar in 1896. Zanzibar surrendered after just 38 minutes.",
-            "A group of flamingos is called a flamboyance.",
-            "The first computer programmer was a woman named Ada Lovelace.",
-            "There are more possible iterations of a game of chess than there are atoms in the known universe.",
-            "The tallest mountain in the solar system is Olympus Mons, located on Mars.",
+            "The US central bank has raised interest rates again, despite fears that the move could add to financial turmoil after a string of bank failures..",
+            "Tyson Fury v Oleksandr Usyk: Promoter Frank Warren says fight is off.",
+            "Oldest most complete Hebrew Bible goes on display in Israel before sale",
+            "Jack Daniel's and dog toy in Supreme Court showdown",
+            "Why workplace drinking culture is fading fast",
         ] }
     }
 }
@@ -24,7 +25,7 @@ impl FactList {
 fn get_random_fact(fact_list: &FactList) -> &'static str {
     use rand::Rng;
     let mut rng = rand::thread_rng();
-   
+
     // let f = rng.gen_range(0..4);
     let l: usize = fact_list.facts.len().try_into().unwrap();
     fact_list.facts[rng.gen_range(0..l)]
@@ -69,7 +70,7 @@ mod tests {
 
     #[tokio::test]
     async fn build_success_response_test() {
-        let test_fact = "This is a test fact.";
+        let test_fact = "This is a test BBCNEWS.";
         let result = build_success_response(test_fact).await;
         let (parts, body) = result.into_parts();
         assert_eq!(200, parts.status.as_u16());
@@ -78,7 +79,7 @@ mod tests {
             parts.headers.get("content-type").unwrap()
         );
         assert_eq!(
-            "{\"fact\":\"This is a test fact.\"}",
+            "{\"fact\":\"This is a test BBCNEWS.\"}",
             String::from_utf8(body.to_ascii_lowercase()).unwrap()
         );
     }
@@ -105,6 +106,6 @@ mod tests {
         assert!(res.is_ok());
         let fact = res.unwrap();
         assert_eq!(fact.name, "history");
-        assert_eq!(fact.description, "The study of past events");
+        assert_eq!(fact.description, "The study of past BBCNEWS");
     }
 }
