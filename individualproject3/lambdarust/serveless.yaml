@@ -15,5 +15,5 @@ functions:
     handler: ./bootstrap
     events:
       - http:
-          path: /fact
+          path: /BBCNEWS
           method: GET
