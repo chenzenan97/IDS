@@ -15,3 +15,10 @@ export OPENAI_API_KEY="xxx"
 cargo run
 ```
 - Launch http://127.0.0.1:8080 in the browser"
+
+
+. AWS App Runner
+Containerize: follow the instructions from here.
+Pay attention to the port in the program and in the setting of the App Runner
+Build container out of the Docker image: run make build --build-arg OPENAI_API_KEY="xxx"
+Clean build: docker build --no-cache --build-arg OPENAI_API_KEY="xxx" -t summarize . or run make build-no-cache --build-arg OPENAI_API_KEY="xxx"
