@@ -1,0 +1,14 @@
+# Keywords-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: Keywords
+  labels:
+    app: Keywords
+spec:
+  ports:
+  - name: http
+    port: 60
+    targetPort: 6060
+  selector:
+    app: Keywords

@@ -1,0 +1,25 @@
+# Keywords-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Keywords
+  labels:
+    app: Keywords
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: Keywords
+  template:
+    metadata:
+      labels:
+        app: Keywords
+    spec:
+      containers:
+      - name: Keywords
+        image: 214569979525.dkr.ecr.us-east-1.amazonaws.com/Keywords
+        ports:
+        - containerPort: 6060
+        env:
+        - name: RUST_LOG
+          value: info
